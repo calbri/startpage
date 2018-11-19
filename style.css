@@ -1,15 +1,89 @@
+body,
 html {
-    background-color:#666666
+  height: 100%;
+  margin: 0;
 }
 
-.content{
-    background-color:#ADADAD;
+a {
+  color: white;
+  text-decoration: none;
+}
 
-    position:fixed;
-    top:0; left:0; right:0; bottom:0;
+.category {
+  display: inline-grid;
+  color: white;
+  padding: 5% 5%;
+  border-radius: 10px;
 
-    margin:auto;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bf67a9+0,960491+100&0.9+0,0.9+100 */
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(40, 110, 202, 0.8) 0%,
+    rgba(5, 196, 202, 0.9) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    rgba(40, 110, 202, 0.8) 0%,
+    rgba(5, 196, 202, 0.9) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    rgba(40, 110, 202, 0.8) 0%,
+    rgba(5, 196, 202, 0.9) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6bf67a9', endColorstr='#e6960491',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
-    height:40%;
-    width:60%;
+.bg {
+  background-image: url("assets/background.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#blink {
+  animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+h1 {
+  font-family: "Roboto Mono", monospace;
+  padding: 1%;
+}
+
+.category h2 {
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: white;
+  padding: 0% 0% 2%;
+  margin: 0% 5%;
+}
+
+.category ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 2.5% 0% 0% 0%;
+  font-family: "Chakra Petch", sans-serif;
+  text-align: center;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: 19% 19% 19% 19% 19%;
+  grid-column-gap: 1.25%;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
